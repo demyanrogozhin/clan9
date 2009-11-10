@@ -1,0 +1,4 @@
+* Ideas
+Simple game of building, resource management and survive in space
+** Realisation
+SBCL + cl-opengl bindings

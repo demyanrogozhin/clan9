@@ -1,0 +1,14 @@
+Clan 9 from λ space
+
+Demo game writen in Common Lisp.
+
+REQUIRE
+cl-opengl: http://common-lisp.net/project/cl-opengl/
+RUNING
+ $ sbcl
+ * (asdf:oos 'asdf:load-op :cl-glut)
+ * (load "/path-to/clan9-from-lambda-space/demo0.lisp")
+ * (clan9:run-demo)
+
+Move mouse & click buttons see what heppens.
+view controll: [UP] [DOWN] [LEFT] [RIGHT] [z] [Z]
