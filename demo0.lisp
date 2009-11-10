@@ -127,7 +127,7 @@
     ;; gear
     (setq gear0 (gl:gen-lists 1))
     (gl:with-new-list (gear0 :compile)
-      (gl:material :front :ambient-and-diffuse #(0.1 0.6 0.1 1.0)) ; color
+      (gl:material :front :ambient-and-diffuse #(0.3 0.4 0.7 .2)) ; color
       (draw-gear 0.6 0.7 0.2 10 0.1))
     (gl:enable :normalize)))
 
