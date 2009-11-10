@@ -128,7 +128,7 @@
     (setq gear0 (gl:gen-lists 1))
     (gl:with-new-list (gear0 :compile)
       (gl:material :front :ambient-and-diffuse #(0.1 0.6 0.1 1.0)) ; color
-      (draw-gear 1.0 4.0 1.0 5 0.7))
+      (draw-gear 0.6 0.7 0.2 10 0.1))
     (gl:enable :normalize)))
 
 (defmethod glut:display ((window demo-window))
@@ -140,13 +140,13 @@
       (gl:rotate view-roty 0 1 0)
       (gl:rotate view-rotz 0 0 1)
       (gl:with-pushed-matrix ; gear
-        (gl:translate -3 -2 0)
-        (gl:rotate angle 0 0 0.2)
+        (gl:translate -1 -1 0)
+        (gl:rotate angle 0 0 0.1)
         (gl:call-list gear0)))
     (glut:swap-buffers)))
 
 (defmethod glut:idle ((window demo-window))
-  (incf (slot-value window 'angle) 01.1)
+  (incf (slot-value window 'angle) 0.1)
   (glut:post-redisplay))
 
 (defmethod glut:keyboard ((window demo-window) key x y)
@@ -184,7 +184,6 @@
     (t (glut:disable-event w :idle))))
 
 (defmethod glut:mouse ((w demo-window) button state x y)
-  (declare (int x y))
   (when (and (eq button :left-button) (eq state :down))
 	(format *terminal-io* "click X: ~D Y: ~D ~%"
 			x y)))
@@ -193,7 +192,6 @@
   (format *terminal-io* "move X: ~D Y: ~D ~%" x y))
 
 (defmethod glut:motion ((w demo-window) x y)
-  (declare (int x y))
   (format *terminal-io* "pick X: ~D Y: ~D ~%" x y))
 
 
