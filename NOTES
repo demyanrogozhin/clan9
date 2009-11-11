@@ -1,4 +1,7 @@
 * Ideas
 Simple game of building, resource management and survive in space
 ** Realisation
+ * Demo0
 SBCL + cl-opengl bindings
+ * Demo1
+SBCL + lispbuilder-sdl

@@ -4,11 +4,20 @@ Demo game writen in Common Lisp.
 
 REQUIREMENTS
 cl-opengl: http://common-lisp.net/project/cl-opengl/
-RUNING
- $ sbcl
- * (asdf:oos 'asdf:load-op :cl-glut)
- * (load "/path-to/clan9-from-lambda-space/demo0.lisp")
- * (clan9:run-demo)
+lispbuilder-sdl: http://lispbuilder.googlecode.com
 
-Move mouse & click buttons see what happens.
-view control: [UP] [DOWN] [LEFT] [RIGHT] [z] [Z]
+RUNING
+
+ DEMO0
+  $ sbcl
+  * (asdf:oos 'asdf:load-op :cl-glut)
+  * (load "/path-to/clan9-from-lambda-space/demo0.lisp")
+  * (clan9:run-demo)
+ Move mouse & click buttons see what happens.
+ view control: [UP] [DOWN] [LEFT] [RIGHT] [z] [Z]
+
+ DEMO1
+  * (asdf:oos 'asdf:load-op :lispbuilder-sdl)
+  * (load "demo1.lisp")
+  * (clan9:demo1)
+ Click in window to add naughty green objects.
