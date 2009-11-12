@@ -1,4 +1,5 @@
 (defpackage #:clan9
+  (:use :cl)
   (:export #:demo1))
 (in-package #:clan9)
 
