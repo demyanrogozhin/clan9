@@ -9,7 +9,7 @@
   x y)
 
 (defun distance (j k)
-  "Euclid distance between object j and k returned"
+  "Euclidean distance between object j and k returned"
   (sqrt (+ (expt (- (object-x j) (object-x k)) 2)
 	   (expt (- (object-y j) (object-y k)) 2))))
 
